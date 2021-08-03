@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="{% static 'css/design.css' %}">
+    <div style="background-image: url('img/safe.png');">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="register" method = "post">
+      {% csrf_token %}
+        <div class="user-details">
+          <input type ="text" name="first_name" placeholder="First_name" required><br>
+        </div>  
+          <div class="input-box">
+           <input type ="text" name="last_name" placeholder="Last_name" required><br>
+          </div>  
+          <div class="input-box">
+             <input type ="text" name="username" placeholder="User_name" required><br>
+          </div>
+          <div class="input-box">
+            <input type ="text" name="email" placeholder="Email" required><br>
+          </div>
+          <div class="input-box">
+            <input type ="Password" name="password1" placeholder="Password" required><br>
+          </div>
+          <div class="input-box">
+            <input type ="Password" name="password2" placeholder="Confirm_password" required><br>
+          </div>
+
+          
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

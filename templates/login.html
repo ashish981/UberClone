@@ -1,0 +1,18 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/log.css' %}" class="css"> 
+
+<form class="login-form" action='login' method="post">
+  {% csrf_token %}
+  <p class="login-text">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-lock fa-stack-1x"></i>
+    </span>
+  </p>
+  <input type="username" class="login-username" autofocus="true" required="true" placeholder="username" name="username"/>
+  <input type="password" class="login-password" required="true" placeholder="Password" name="password"/>
+  <input type="submit" name="Login" value="Login" class="login-submit" />
+</form>
+<a href="register" class="login-forgot-pass">forgot password?</a>
+<div class="underlay-photo"></div>
+<div class="underlay-black"></div> 
